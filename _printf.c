@@ -3,15 +3,13 @@
 void print_buffer(char buffer[], int *buff_ind);
 
 /**
- * _printf - A Printf function.
- * @format: Specified format of a the string to be printed.
- * Return: The characters printed in the given format.
+ * _printf -The Printf function
+ * @format: Format of a string.
+ * Return: Printed characters.
  */
 int _printf(const char *format, ...)
 {
-	int i;
-	int printed = 0;
-	int printed_chars = 0;
+	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
@@ -55,9 +53,10 @@ int _printf(const char *format, ...)
 }
 
 /**
- * print_buffer - Prints the contents of the buffer if it exist
- * @buffer: Array of chars
- * @buff_ind: Index at which to add next char, represents the length.
+ * print_buffer - Prints the buffer of the buffer if there is any.
+ * @buffer: Array of characters
+ * @buff_ind: Index at which to add next character, could also
+ * represents the length.
  */
 void print_buffer(char buffer[], int *buff_ind)
 {
@@ -66,4 +65,5 @@ void print_buffer(char buffer[], int *buff_ind)
 
 	*buff_ind = 0;
 }
+
 
